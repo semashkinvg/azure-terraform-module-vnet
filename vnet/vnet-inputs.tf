@@ -29,6 +29,7 @@ variable "vnet" {
     cidrs = list(string)
     subnets = map(object({
       cidrs = list(string)
+      service_endpoints = optional(list(string))
     }))
   })
 }
