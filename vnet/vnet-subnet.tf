@@ -1,6 +1,6 @@
 
 
-resource "azurerm_subnet" "vnet-subnet" {
+resource "azurerm_subnet" "vnet_subnet" {
   for_each             = var.vnet.subnets
   name                 = "${var.global_prefix}-${var.location}-${var.environment_code}-${var.purpose}"
   resource_group_name  = var.rg_name
